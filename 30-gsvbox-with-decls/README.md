@@ -6,11 +6,11 @@ We desire to compile our application with `-fobjc-arc` and the workaround for us
 
 This all works well.
 
-![original layout](gsvbox-with-decls-pic1.pnd)
+![original layout](gsvbox-with-decls-pic1.png)
 
 After resizing the window and typing some messages into the text area and pressing the "Send" button, the new layout looks like this.
 
-![resized layout](gsvbox-with-decls-pic2.pnd)
+![resized layout](gsvbox-with-decls-pic2.png)
 
 
 
