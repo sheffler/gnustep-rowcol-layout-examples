@@ -71,7 +71,7 @@
 				  backing:NSBackingStoreBuffered
 				    defer:NO];
 
-  [self.win setTitle: @"Manual-layout"];
+  [self.win setTitle: @"GSVbox-Decls"];
   // [self.win setReleasedWhenClosed: NO]; // ??
 
   [self.win setContentView: vbox];
