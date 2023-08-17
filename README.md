@@ -1,28 +1,30 @@
 # GNUstep Row and Column Layout Examples
 
-This project demonstrates some techniques and possible issues when creating layouts completely programmatically.  We wanted to create a simple window app without using GORM and in the process explored different ways of lining things up in rows and columns.
+This project demonstrates some techniques and possible issues when creating layouts completely programmatically.  I wanted to create a simple window app without using GORM and in the process explored different ways of lining things up in rows and columns.
 
-By looking at some example tests, we found `GSHbox` and `GSVbox` which do exactly what we want.  We found that these do not play well with code compiled with `-fobjc-arc`.
+By looking at some example tests, I found `GSHbox` and `GSVbox` which do exactly what I want.  However, it seems the inclusion of the header files for these classes do not work well with ARC (`-fobjc-arc`).
 
-We wanted to explore the use of `NSStackView`, but got could not get very far with that.
+I wanted to explore the use of `NSStackView`, but got could not get very far with that.
+
+When constraints are implemented, I hope to include some examples using those too.
 
 ## Technique
 
-The demonstrations here all create a little "Log Viewer" widget with a scroll bar and text area for entering new log messages.  There is also a background timer sending new messsages to the Log.  A user should be able to add new messages by pressing the "Send" button.  The window should be able to be resized, and should have a minimum size.
+The demonstrations here all create a little "Log Viewer" widget with a scroll bar and text area for entering new log messages.  There is also a background timer sending new messsages to the Log.  A user should be able to add new messages by pressing the "Send" button.  The window should be able to be resized, and should have a minimum size.  This is implemented in `10-manual-layout`.
 
 In examples `20-gsvbox-compile-error`, `30-gsvbox-with-decls` and `40-stack-view` the previous functionality is augmented with a "Clear" button to clear the log.  The button is placed in an HBOX and is arranged with the Log Viewer in a VBOX to demonstrate some simple layout.  Each of these currently demonstrates some sort of limitation.
 
-We also investigated `NSGridView`, but didn't get very far with that.
+I also investigated `NSGridView`, but didn't get very far with that.
 
 ## The Hope
 
-The hope is that by sharing these, the sub-projects with the limitations can be investigated, and workarounds can be shared!
+The hope is that by sharing these, the sub-projects with the limitations can be investigated, and workarounds can be shared.  I'd like to add more examples showing other ways to construct views programmatically in the future.
 
 ## The sub-projects
 
 * [10-manual-layout](10-manual-layout) - A view with a Button, a TextBox and Scrolling TextView.  Completely manual layout put in a window.  Works fine.
 
-* [20-gsvbox-compile-error](20-gsvbox-compile-error) - This was inspired by `NSSlider Test` in https://github.com/gnustep/tests-examples.  It showed the use of GSVbox and GSHbox for simple row and column layout.  This technique seems fine.  However, it does not compile well with ARC.
+* [20-gsvbox-compile-error](20-gsvbox-compile-error) - This was inspired by `NSSlider Test` in https://github.com/gnustep/tests-examples.  (See the figure below.)  That example showed the use of GSVbox and GSHbox for simple row and column layout.  This technique seems fine.  However, it does not compile well with ARC.
 
 ![NSSlider Test](nsslider-test.png)
 
