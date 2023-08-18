@@ -27,6 +27,7 @@
   [button sizeToFit];
   [button setTag: 1];
 
+  hbox = [NSStackView new];
   [hbox addView: button inGravity:NSStackViewGravityTop];
   // [hbox setAutoresizingMask: NSViewWidthSizable];
 
