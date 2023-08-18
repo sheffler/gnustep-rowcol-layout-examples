@@ -66,7 +66,7 @@
 				  backing:NSBackingStoreBuffered
 				    defer:NO];
 
-  [self.win setTitle: @"Manual-layout"];
+  [self.win setTitle: @"NSStackView"];
   // [self.win setReleasedWhenClosed: NO]; // ??
 
   [self.win setContentView: vbox];
