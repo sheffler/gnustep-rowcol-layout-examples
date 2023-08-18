@@ -2,11 +2,13 @@
 
 This project demonstrates some techniques and possible issues when creating layouts completely programmatically.  I wanted to create a simple window app without using GORM and in the process explored different ways of lining things up in rows and columns.
 
+The target platform is Linux, with GCD (dispatch) and ARC.  `clang` is the preferred compiler.
+
 By looking at some example tests, I found `GSHbox` and `GSVbox` which do exactly what I want.  However, it seems the inclusion of the header files for these classes do not work well with ARC (`-fobjc-arc`).
 
 I wanted to explore the use of `NSStackView`, but got could not get very far with that.
 
-When constraints are implemented, I hope to include some examples using those too.
+When constraints are implemented, I hope to include some examples using those too.  Also and example with `NSGridView` should be included one day.
 
 ## Technique
 
@@ -14,11 +16,13 @@ The demonstrations here all create a little "Log Viewer" widget with a scroll ba
 
 In examples `20-gsvbox-compile-error`, `30-gsvbox-with-decls` and `40-stack-view` the previous functionality is augmented with a "Clear" button to clear the log.  The button is placed in an HBOX and is arranged with the Log Viewer in a VBOX to demonstrate some simple layout.  Each of these currently demonstrates some sort of limitation.
 
-I also investigated `NSGridView`, but didn't get very far with that.
+I also investigated `NSGridView`, but didn't get very far with that, so there is no sample here.
 
 ## The Hope
 
 The hope is that by sharing these, the sub-projects with the limitations can be investigated, and workarounds can be shared.  I'd like to add more examples showing other ways to construct views programmatically in the future.
+
+Please contribute an example programmatic layout if you can.
 
 ## The sub-projects
 
