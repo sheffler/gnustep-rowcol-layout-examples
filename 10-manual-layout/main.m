@@ -12,12 +12,6 @@ int main(int argc, char *argv[])
       AppDelegate *delegate = [AppDelegate new];
       [NSApp setDelegate:delegate];
 
-      dispatch_async(
-		     dispatch_get_main_queue(),
-		     ^{
-		       [NSApp activateIgnoringOtherApps:YES];
-		     });
-
       [NSApp run];
     }
 
